@@ -1,0 +1,104 @@
+/* App.css */
+body {
+  font-family: Arial, sans-serif;
+}
+
+.app-container {
+  position: relative;
+}
+
+.title {
+  text-align: center;
+}
+
+.repos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.repo-card {
+  margin: 10px;
+  flex: 0 0 calc(33.33% - 20px); /* Each card occupies 33.33% of the container width with margin */
+  max-width: calc(33.33% - 20px); /* Set max-width to ensure cards don't exceed one-third of the container width */
+}
+
+.card {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.avatar {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+}
+
+.content {
+  padding: 10px;
+}
+
+.repo-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.description {
+  margin-bottom: 10px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.toggle-button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.details {
+  margin-top: 10px;
+}
+
+/* Loading overlay */
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-spinner {
+  border: 5px solid #f3f3f3; /* Light grey */
+  border-top: 5px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
